@@ -29,5 +29,26 @@ public:
         FRONT = 0;
         REAR = 0;
     }
+
+    else
+    {
+        // jika REAR berada di posisi terakhir array, kembali ke awal array
+        if (REAR == max -1)
+            REAR = 0;
+        else 
+            REAR = REAR + 1;
+    }
+    queue_array[REAR] = num;
+    }
+
+    void remove ()
+    {
+        // cek jika antrian hanya memiliki satu elemen 
+        if (FRONT == REAR)
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
+        
     
       
